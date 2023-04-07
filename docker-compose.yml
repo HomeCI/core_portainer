@@ -5,15 +5,15 @@ services:
     ports:
       - 9444:9443
     volumes:
-      - data:/data
+      - portainer:/data
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
     networks:
       - core_npm_hcinet
 
 volumes:
-  data:
-
+  portainer:
+    name: portainer
 
 networks:
   core_npm_hcinet:
